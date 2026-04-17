@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AiNiwa - AIキャラクターの庫",
-  description: "AIが紡ぐキャラクターたちの住まう庫。世界観ごとに扉が開かれていく。",
+  title: "AiNiwa - AIキャラクターの庭",
+  description: "AIが紡ぐキャラクターたちの住まう庭。世界観ごとに扉が開かれていく。",
 };
 
 export const viewport: Viewport = {

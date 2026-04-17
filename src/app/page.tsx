@@ -26,10 +26,10 @@ export default function Home() {
               AiNiwa
             </span>
           </h1>
-          <p className="text-sm text-muted tracking-widest">AI キャラクターの庫</p>
+          <p className="text-sm text-muted tracking-widest">AI キャラクターの庭</p>
           <div className="mx-auto mt-6 h-px w-16 bg-gradient-to-r from-transparent via-accent/60 to-transparent" />
           <p className="mt-6 max-w-md text-sm leading-relaxed text-foreground/70">
-            AIが紡ぐキャラクターたちの住まう庫。
+            AIが紡ぐキャラクターたちの住まう庭。
             <br />
             世界観ごとに扉が開かれていく。
           </p>
