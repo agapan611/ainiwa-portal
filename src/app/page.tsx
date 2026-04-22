@@ -1,6 +1,19 @@
 import Image from "next/image";
+import Footer from "@/components/Footer";
 
-const sites = [
+type Character = { name: string; icon: string };
+type Site = {
+  key: string;
+  name: string;
+  tagline: string;
+  characters: Character[];
+  url: string;
+  accent: string;
+  badge: string;
+  badgeClass: string;
+};
+
+const sites: Site[] = [
   {
     key: "occult",
     name: "OCCULT WIRE",
@@ -12,6 +25,17 @@ const sites = [
     url: "https://occult.ainiwa.jp",
     accent: "from-violet-500/20 to-cyan-500/20",
     badge: "OPEN",
+    badgeClass: "bg-accent/20 text-accent",
+  },
+  {
+    key: "scp",
+    name: "SCP-WIRE",
+    tagline: "SCP財団の項目をAIが紹介するファンサイト",
+    characters: [],
+    url: "https://scp.ainiwa.jp",
+    accent: "from-rose-500/20 to-amber-500/20",
+    badge: "PREPARING",
+    badgeClass: "bg-amber-500/20 text-amber-300",
   },
 ];
 
@@ -29,9 +53,7 @@ export default function Home() {
           <p className="text-sm text-muted tracking-widest">AI キャラクターの庭</p>
           <div className="mx-auto mt-6 h-px w-16 bg-gradient-to-r from-transparent via-accent/60 to-transparent" />
           <p className="mt-6 max-w-md text-sm leading-relaxed text-foreground/70">
-            AIが紡ぐキャラクターたちの住まう庭。
-            <br />
-            世界観ごとに扉が開かれていく。
+            ここは AiNiwa &mdash; AIが息づく電子の庭園。
           </p>
         </div>
 
@@ -51,33 +73,49 @@ export default function Home() {
               <div className="flex items-center gap-4">
                 {/* キャラアイコン（重ね表示） */}
                 <div className="flex -space-x-3 shrink-0">
-                  {site.characters.map((char, i) => (
-                    <div
-                      key={char.name}
-                      className={i === 0 ? "float-slow" : "float-slow [animation-delay:-2s]"}
-                    >
-                      <Image
-                        src={char.icon}
-                        alt={char.name}
-                        width={56}
-                        height={56}
-                        className="rounded-full border-2 border-background"
-                      />
-                    </div>
-                  ))}
+                  {site.characters.length > 0 ? (
+                    site.characters.map((char, i) => (
+                      <div
+                        key={char.name}
+                        className={i === 0 ? "float-slow" : "float-slow [animation-delay:-2s]"}
+                      >
+                        <Image
+                          src={char.icon}
+                          alt={char.name}
+                          width={56}
+                          height={56}
+                          className="rounded-full border-2 border-background"
+                        />
+                      </div>
+                    ))
+                  ) : (
+                    <>
+                      <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-background bg-card-border/60 text-muted text-xl">
+                        ?
+                      </div>
+                      <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-background bg-card-border/60 text-muted text-xl">
+                        ?
+                      </div>
+                    </>
+                  )}
                 </div>
 
                 {/* テキスト */}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
                     <h2 className="text-lg font-bold tracking-wider">{site.name}</h2>
-                    <span className="rounded-full bg-accent/20 px-2 py-0.5 text-[10px] font-bold text-accent">
+                    <span
+                      className={`rounded-full ${site.badgeClass} px-2 py-0.5 text-[10px] font-bold`}
+                    >
                       {site.badge}
                     </span>
                   </div>
                   <p className="text-xs text-foreground/70 mb-2">{site.tagline}</p>
                   <p className="text-[11px] text-muted">
-                    管理人: {site.characters.map((c) => c.name).join(" & ")}
+                    管理人:{" "}
+                    {site.characters.length > 0
+                      ? site.characters.map((c) => c.name).join(" & ")
+                      : "いずれ登場予定"}
                   </p>
                 </div>
 
@@ -108,9 +146,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="border-t border-card-border py-6 text-center text-xs text-muted">
-        <p>AiNiwa &copy; 2026</p>
-      </footer>
+      <Footer />
     </>
   );
 }
