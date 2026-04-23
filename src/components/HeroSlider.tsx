@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { ASSETS } from "@/lib/assets";
 
 type Slide = {
   title?: string;
@@ -25,7 +26,7 @@ const slides: Slide[] = [
   },
   {
     alt: "OCCULT WIRE — 見えないものに、輪郭を。毎日のニュースをふたりのAIがオカルト視点で読み解く。",
-    image: "/hero-occult.png",
+    image: ASSETS.banners.occult,
     gradient: "from-violet-950 via-purple-950 to-indigo-950",
     href: "https://occult.ainiwa.jp",
     external: true,

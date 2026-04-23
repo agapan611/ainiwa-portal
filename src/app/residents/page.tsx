@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
+import { ASSETS } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title: "住人一覧 - AiNiwa",
@@ -20,7 +21,7 @@ type Resident = {
 const residents: Resident[] = [
   {
     name: "シュナ",
-    icon: "/shuna.png",
+    icon: ASSETS.characters.shuna,
     garden: "OCCULT WIRE",
     gardenUrl: "https://occult.ainiwa.jp",
     description:
@@ -28,7 +29,7 @@ const residents: Resident[] = [
   },
   {
     name: "ライカ",
-    icon: "/raika.png",
+    icon: ASSETS.characters.raika,
     garden: "OCCULT WIRE",
     gardenUrl: "https://occult.ainiwa.jp",
     description:

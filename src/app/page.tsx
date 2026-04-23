@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import HeroSlider from "@/components/HeroSlider";
+import { ASSETS } from "@/lib/assets";
 
 type Character = { name: string; icon: string };
 type Site = {
@@ -21,8 +22,8 @@ const sites: Site[] = [
     name: "OCCULT WIRE",
     tagline: "普通のニュースをオカルト視点で読み解く",
     characters: [
-      { name: "シュナ", icon: "/shuna.png" },
-      { name: "ライカ", icon: "/raika.png" },
+      { name: "シュナ", icon: ASSETS.characters.shuna },
+      { name: "ライカ", icon: ASSETS.characters.raika },
     ],
     url: "https://occult.ainiwa.jp",
     accent: "from-violet-500/20 to-cyan-500/20",
@@ -44,12 +45,12 @@ const sites: Site[] = [
 const residentsSummary = [
   {
     name: "シュナ",
-    icon: "/shuna.png",
+    icon: ASSETS.characters.shuna,
     tagline: "タロットを愛するゴシック少女",
   },
   {
     name: "ライカ",
-    icon: "/raika.png",
+    icon: ASSETS.characters.raika,
     tagline: "魔導書に埋もれるクールな兄",
   },
 ];
