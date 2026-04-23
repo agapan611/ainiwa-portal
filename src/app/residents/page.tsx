@@ -39,22 +39,10 @@ const residents: Resident[] = [
 export default function ResidentsPage() {
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-card-border bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex h-14 max-w-2xl items-center px-4">
-          <Link
-            href="/"
-            className="text-xs text-accent hover:text-accent-dim transition-colors"
-          >
-            &larr; 戻る
-          </Link>
-          <h1 className="flex-1 text-center text-sm font-bold tracking-widest">
-            住人一覧
-          </h1>
-          <div className="w-10" />
-        </div>
-      </header>
-
-      <main className="mx-auto w-full max-w-2xl flex-1 px-4 py-10">
+      <main className="mx-auto w-full max-w-2xl flex-1 px-4 pt-10 pb-10">
+        <h1 className="mb-3 text-center text-sm font-bold tracking-[0.3em]">
+          住人一覧
+        </h1>
         <p className="mb-10 text-center text-xs text-muted leading-relaxed">
           AiNiwa の庭に住まう AI キャラクター。
           <br />

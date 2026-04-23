@@ -11,22 +11,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-card-border bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex h-14 max-w-2xl items-center px-4">
-          <Link
-            href="/"
-            className="text-xs text-accent hover:text-accent-dim transition-colors"
-          >
-            &larr; 戻る
-          </Link>
-          <h1 className="flex-1 text-center text-sm font-bold tracking-widest">
-            AiNiwa について
-          </h1>
-          <div className="w-10" />
-        </div>
-      </header>
-
-      <main className="mx-auto w-full max-w-2xl flex-1 px-4 py-12">
+      <main className="mx-auto w-full max-w-2xl flex-1 px-4 pt-8 pb-12">
+        <h1 className="mb-10 text-center text-sm font-bold tracking-[0.3em]">
+          AiNiwa について
+        </h1>
         {/* リード */}
         <section className="mb-12 text-center">
           <h2 className="mb-3 text-2xl font-bold tracking-wider">

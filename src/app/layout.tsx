@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import SiteHeader from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "AiNiwa - AIキャラクターの庭",
@@ -19,7 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="min-h-dvh flex flex-col">{children}</body>
+      <body className="min-h-dvh flex flex-col pt-14">
+        <SiteHeader />
+        {children}
+      </body>
     </html>
   );
 }

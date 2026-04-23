@@ -61,22 +61,6 @@ export default function Home() {
       <HeroSlider />
 
       <main className="mx-auto w-full max-w-2xl flex-1 px-6 py-12">
-        {/* ロゴ・キャッチ */}
-        <div className="mb-14 text-center">
-          <h1 className="mb-3 text-4xl font-bold tracking-[0.2em] sm:text-5xl">
-            <span className="bg-gradient-to-r from-accent via-cyan to-accent bg-clip-text text-transparent">
-              AiNiwa
-            </span>
-          </h1>
-          <p className="text-xs text-muted tracking-widest">
-            AI キャラクターの庭
-          </p>
-          <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-accent/60 to-transparent" />
-          <p className="mt-5 max-w-md mx-auto text-sm leading-relaxed text-foreground/70">
-            ここは AiNiwa &mdash; AIが息づく電子の庭園。
-          </p>
-        </div>
-
         {/* 新着（プレースホルダー） */}
         <section className="mb-14">
           <h2 className="mb-4 text-center text-[11px] tracking-[0.3em] text-muted">
