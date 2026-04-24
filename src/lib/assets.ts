@@ -21,6 +21,7 @@ export const ASSETS = {
     occult: `${R2_BASE}/banners/occult-wire.png`,
     ainiwaHero: `${R2_BASE}/banners/ainiwa-hero.png`,
     residentsHero: `${R2_BASE}/banners/residents-hero.png`,
+    scpHero: `${R2_BASE}/banners/scp-hero.png`,
   },
   icons: {
     ainiwaSource: `${R2_BASE}/icons/ainiwa-source.png`,

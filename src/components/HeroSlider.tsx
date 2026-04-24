@@ -31,11 +31,10 @@ const slides: Slide[] = [
     external: true,
   },
   {
-    title: "SCP-WIRE 準備中",
-    subtitle: "SCP財団の項目を AI が紹介する試み",
-    cta: "覗いてみる",
+    alt: "SCP-WIRE 準備中 — SCP財団の項目を AI が紹介する試み",
+    image: ASSETS.banners.scpHero,
+    gradient: "from-amber-950 via-rose-950 to-red-950",
     href: "https://scp.ainiwa.jp",
-    gradient: "from-amber-700 via-rose-700 to-red-900",
     external: true,
   },
   {
