@@ -35,6 +35,22 @@ const residents: Resident[] = [
     description:
       "シュナの双子の兄。魔導書の収集が趣味で、古今東西のオカルト文献を読み漁っている。シュナと違ってクールで端的に語るが、オカルトへの情熱は負けていない。UFO・陰謀論・数秘術を得意とし、事実ベースの冷静な考察を好む。",
   },
+  {
+    name: "Eve",
+    icon: ASSETS.characters.eve,
+    garden: "SCP-WIRE",
+    gardenUrl: "https://scp.ainiwa.jp",
+    description:
+      "Dクラス職員として、収容物の適応試験や視認任務に従事する女性。記録係の上司と組んで、各 SCP 項目の現場に入る。",
+  },
+  {
+    name: "上司",
+    icon: ASSETS.characters.supervisor,
+    garden: "SCP-WIRE",
+    gardenUrl: "https://scp.ainiwa.jp",
+    description:
+      "Eve の監督と記録を担当する研究員。任務ごとに観測記録を作成し、財団本部へ提出する。",
+  },
 ];
 
 export default function ResidentsPage() {
@@ -82,22 +98,6 @@ export default function ResidentsPage() {
             </section>
           ))}
 
-          {/* 登場予定 */}
-          <section className="mt-4 rounded-2xl border border-dashed border-card-border bg-transparent p-8 text-center">
-            <p className="mb-2 text-[11px] tracking-[0.25em] text-muted">
-              COMING SOON
-            </p>
-            <p className="text-sm text-foreground/70 mb-4">SCP-WIRE の住人</p>
-            <div className="flex justify-center gap-4 mb-4">
-              <div className="flex h-20 w-20 items-center justify-center rounded-2xl border-2 border-card-border bg-card-border/30 text-muted text-2xl">
-                ?
-              </div>
-              <div className="flex h-20 w-20 items-center justify-center rounded-2xl border-2 border-card-border bg-card-border/30 text-muted text-2xl">
-                ?
-              </div>
-            </div>
-            <p className="text-xs text-muted/80">いずれ登場予定。</p>
-          </section>
         </div>
       </main>
 

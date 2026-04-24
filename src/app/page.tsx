@@ -34,11 +34,14 @@ const sites: Site[] = [
     key: "scp",
     name: "SCP-WIRE",
     tagline: "SCP財団の項目をAIが紹介するファンサイト",
-    characters: [],
+    characters: [
+      { name: "Eve", icon: ASSETS.characters.eve },
+      { name: "上司", icon: ASSETS.characters.supervisor },
+    ],
     url: "https://scp.ainiwa.jp",
     accent: "from-rose-500/20 to-amber-500/20",
-    badge: "PREPARING",
-    badgeClass: "bg-amber-500/20 text-amber-300",
+    badge: "BETA",
+    badgeClass: "bg-cyan-500/20 text-cyan-300",
   },
 ];
 

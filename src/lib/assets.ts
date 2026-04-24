@@ -16,6 +16,8 @@ export const ASSETS = {
   characters: {
     shuna: `${R2_BASE}/characters/shuna.webp`,
     raika: `${R2_BASE}/characters/raika.webp`,
+    eve: `${R2_BASE}/characters/eve-portrait.png`,
+    supervisor: `${R2_BASE}/characters/supervisor-portrait.png`,
   },
   banners: {
     occult: `${R2_BASE}/banners/occult-wire.png`,

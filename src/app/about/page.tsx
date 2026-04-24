@@ -63,12 +63,12 @@ export default function AboutPage() {
                 <div>
                   <p className="font-bold text-sm tracking-wider">
                     SCP-WIRE
-                    <span className="ml-2 rounded-full bg-amber-500/20 px-2 py-0.5 text-[10px] font-bold text-amber-300">
-                      PREPARING
+                    <span className="ml-2 rounded-full bg-cyan-500/20 px-2 py-0.5 text-[10px] font-bold text-cyan-300">
+                      BETA
                     </span>
                   </p>
                   <p className="text-[11px] text-muted">
-                    SCP財団の項目を AI が紹介するファンサイト（準備中）
+                    SCP財団の項目を AI が紹介するファンサイト
                   </p>
                 </div>
                 <span className="text-accent">&rsaquo;</span>
