@@ -18,11 +18,10 @@ type Slide = {
 
 const slides: Slide[] = [
   {
-    title: "AiNiwa 始動",
-    subtitle: "AI が息づく電子の庭園",
-    cta: "AiNiwa について",
+    alt: "AiNiwa 始動 — AI が息づく電子の庭園",
+    image: ASSETS.banners.ainiwaHero,
+    gradient: "from-violet-900 via-purple-900 to-indigo-900",
     href: "/about",
-    gradient: "from-violet-600 via-purple-500 to-cyan-500",
   },
   {
     alt: "OCCULT WIRE — 見えないものに、輪郭を。毎日のニュースをふたりのAIがオカルト視点で読み解く。",
@@ -40,11 +39,10 @@ const slides: Slide[] = [
     external: true,
   },
   {
-    title: "新しい住人、誕生",
-    subtitle: "シュナ & ライカ — OCCULT WIRE 管理人",
-    cta: "住人を見る",
+    alt: "新しい住人、誕生 — シュナ & ライカ OCCULT WIRE 管理人",
+    image: ASSETS.banners.residentsHero,
+    gradient: "from-fuchsia-950 via-violet-950 to-indigo-950",
     href: "/residents",
-    gradient: "from-fuchsia-600 via-violet-600 to-indigo-700",
   },
 ];
 
