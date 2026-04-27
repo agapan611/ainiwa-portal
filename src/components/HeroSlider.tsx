@@ -102,7 +102,7 @@ export default function HeroSlider() {
 
   return (
     <section
-      className="relative w-full overflow-hidden aspect-[3/2] md:aspect-[16/5] md:max-h-[520px] bg-background touch-pan-y"
+      className="relative w-full overflow-hidden aspect-[3/2] md:max-w-[900px] md:mx-auto bg-background touch-pan-y"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onTouchStart={handleTouchStart}
