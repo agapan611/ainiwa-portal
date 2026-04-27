@@ -12,6 +12,7 @@ type Slide = {
   href: string;
   gradient?: string;
   image?: string;
+  imageMobile?: string;
   alt?: string;
   external?: boolean;
 };
@@ -19,27 +20,31 @@ type Slide = {
 const slides: Slide[] = [
   {
     alt: "AiNiwa 始動 — AI が息づく電子の庭園",
-    image: ASSETS.banners.ainiwaHero,
+    image: ASSETS.banners.ainiwa.pc,
+    imageMobile: ASSETS.banners.ainiwa.mobile,
     gradient: "from-violet-900 via-purple-900 to-indigo-900",
     href: "/about",
   },
   {
     alt: "OCCULT WIRE — 見えないものに、輪郭を。毎日のニュースをふたりのAIがオカルト視点で読み解く。",
-    image: ASSETS.banners.occult,
+    image: ASSETS.banners.occult.pc,
+    imageMobile: ASSETS.banners.occult.mobile,
     gradient: "from-violet-950 via-purple-950 to-indigo-950",
     href: "https://occult.ainiwa.jp",
     external: true,
   },
   {
     alt: "SCP-WIRE 準備中 — SCP財団の項目を AI が紹介する試み",
-    image: ASSETS.banners.scpHero,
+    image: ASSETS.banners.scp.pc,
+    imageMobile: ASSETS.banners.scp.mobile,
     gradient: "from-amber-950 via-rose-950 to-red-950",
     href: "https://scp.ainiwa.jp",
     external: true,
   },
   {
-    alt: "新しい住人、誕生 — シュナ & ライカ OCCULT WIRE 管理人",
-    image: ASSETS.banners.residentsHero,
+    alt: "AiNiwa の住人たち — シュナ & ライカ（OCCULT WIRE）, Eve & Supervisor（SCP-WIRE）",
+    image: ASSETS.banners.residents.pc,
+    imageMobile: ASSETS.banners.residents.mobile,
     gradient: "from-fuchsia-950 via-violet-950 to-indigo-950",
     href: "/residents",
   },
@@ -102,7 +107,7 @@ export default function HeroSlider() {
 
   return (
     <section
-      className="relative w-full overflow-hidden aspect-[3/2] md:max-w-[900px] md:mx-auto bg-background touch-pan-y"
+      className="relative w-full overflow-hidden aspect-[3/2] md:aspect-[5/2] md:max-w-[1983px] md:mx-auto bg-background touch-pan-y"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onTouchStart={handleTouchStart}
@@ -121,14 +126,26 @@ export default function HeroSlider() {
               />
             )}
             {slide.image ? (
-              <Image
-                src={slide.image}
-                alt={slide.alt ?? ""}
-                fill
-                sizes="100vw"
-                className="object-cover object-center"
-                priority={i <= 1}
-              />
+              <>
+                <Image
+                  src={slide.image}
+                  alt={slide.alt ?? ""}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 1983px"
+                  className="hidden md:block object-cover object-center"
+                  priority={i <= 1}
+                />
+                {slide.imageMobile && (
+                  <Image
+                    src={slide.imageMobile}
+                    alt={slide.alt ?? ""}
+                    fill
+                    sizes="100vw"
+                    className="md:hidden object-cover object-center"
+                    priority={i <= 1}
+                  />
+                )}
+              </>
             ) : (
               <>
                 <div className="absolute inset-0 bg-black/35" />

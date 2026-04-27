@@ -8,6 +8,9 @@
  *   1. shared-assets/ 内のファイルを更新
  *   2. shared-assets で `node sync.mjs` を実行
  *   3. ここのキーを追加したら各サイトで commit/push → 自動デプロイ
+ *
+ * banners は mobile (3:2) / pc (5:2) の出し分け構造。
+ * 命名規則: `<slug>-hero.png` = スマホ用 3:2、`<slug>-banner.png` = PC 用 5:2。
  */
 
 const R2_BASE = "https://pub-481c073fb7994d50ab97163e55cad4d5.r2.dev";
@@ -26,10 +29,22 @@ export const ASSETS = {
     raikaSd: `${R2_BASE}/characters/raika/sd.png`,
   },
   banners: {
-    occult: `${R2_BASE}/banners/occult-wire-banner.png`,
-    ainiwaHero: `${R2_BASE}/banners/ainiwa-hero.png`,
-    residentsHero: `${R2_BASE}/banners/residents-hero.png`,
-    scpHero: `${R2_BASE}/banners/scp-hero.png`,
+    ainiwa: {
+      mobile: `${R2_BASE}/banners/ainiwa-hero.png`,
+      pc: `${R2_BASE}/banners/ainiwa-banner.png`,
+    },
+    occult: {
+      mobile: `${R2_BASE}/banners/occult-wire-hero.png`,
+      pc: `${R2_BASE}/banners/occult-wire-banner.png`,
+    },
+    scp: {
+      mobile: `${R2_BASE}/banners/scp-hero.png`,
+      pc: `${R2_BASE}/banners/scp-banner.png`,
+    },
+    residents: {
+      mobile: `${R2_BASE}/banners/residents-hero.png`,
+      pc: `${R2_BASE}/banners/residents-banner.png`,
+    },
   },
   icons: {
     ainiwaSource: `${R2_BASE}/icons/ainiwa-source.png`,
